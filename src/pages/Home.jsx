@@ -1,5 +1,5 @@
 import React from 'react'
-import {About,Services} from './index.js'
+import {About,Services,Contact} from './index.js'
 
 const Home = () => {
   return (
@@ -9,6 +9,9 @@ const Home = () => {
       </div>
       <div className='pt-8'>
         <Services/>
+      </div>
+      <div className='pt-8'>
+        <Contact/>
       </div>
     </div>
   )

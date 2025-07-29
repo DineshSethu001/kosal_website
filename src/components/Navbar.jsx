@@ -4,6 +4,7 @@ import 'boxicons'
 import logo from '../assets/img/logo.png'
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { BiLogIn } from "react-icons/bi";
 
 const Navbar = () => {
   const [visible, setVisible] = useState(false)
@@ -38,7 +39,10 @@ const Navbar = () => {
           <hr className='hidden border-none h-[1.5px] w-2/4 bg-gray-700 ' />
         </NavLink>
       </ul>
-
+     
+    <div className="w-24 h-24 flex items-center justify-center">
+    <BiLogIn className='text-4xl hover:text-[#93DA97]' />
+    </div>
 
 <div className="sm:hidden w-10 cursor-pointer ">
   <i
