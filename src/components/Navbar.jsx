@@ -3,51 +3,55 @@ import 'boxicons/css/boxicons.min.css';
 import 'boxicons'
 import logo from '../assets/img/logo.png'
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { BiLogIn } from "react-icons/bi";
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [visible, setVisible] = useState(false)
+  const navigate = useNavigate();
   return (
-    <nav className="navbar w-full bg-white shadow-md z-50 flex justify-between items-center font-medium px-4 py-2 rounded">
-      <img src={logo} className="w-35 h-auto" alt="logo" />
+    <nav className="navbar w-full bg-white shadow-md z-50 flex border-none justify-around items-center font-medium px-4 py-2 rounded">
+    <Link to="/">  <img src={logo} className="w-35 h-auto" alt="logo" /></Link>
       {/* Desktop view */}
 
       <ul className="hidden sm:flex text-gray-700 gap-5 text-sm ">
-        <NavLink to="/" className="flex gap-1 flex-col items-center">
-          <p className='tracking-wide'>
-            Home
+        <NavLink to="/about" className="flex gap-1 flex-col items-center">
+          <p className='hover:text-[#FF7A30] tracking-wide'>
+            About
           </p>
           <hr className='hidden border-none h-[1.5px] w-2/4 bg-gray-700 ' />
         </NavLink>
         <NavLink to="/services" className="flex gap-1 flex-col items-center">
-          <p className='tracking-wide'>
+          <p className='hover:text-[#FF7A30] tracking-wide'>
             Services
           </p>
           <hr className='hidden border-none h-[1.5px] w-2/4 bg-gray-700 ' />
         </NavLink>
         <NavLink to="/contact" className="flex gap-1 flex-col items-center">
-          <p className='tracking-wide'>
+          <p className=' hover:text-[#FF7A30] tracking-wide'>
             Contact
           </p>
           <hr className='hidden border-none h-[1.5px] w-2/4 bg-gray-700 ' />
         </NavLink>
-        <NavLink to="/products" className="flex gap-1 flex-col items-center">
+        {/* <NavLink to="/products" className="flex gap-1 flex-col items-center">
           <p className='tracking-wide'>
             Products
           </p>
           <hr className='hidden border-none h-[1.5px] w-2/4 bg-gray-700 ' />
-        </NavLink>
+        </NavLink> */}
       </ul>
-     
-    <div className="w-24 h-24 flex items-center justify-center">
+     {/* admin login */}
+    {/* <div className="w-24 h-24 flex flex-col items-center justify-center cursor-pointer" onClick={()=>navigate('/admin-login')}>
     <BiLogIn className='text-4xl hover:text-[#93DA97]' />
-    </div>
+    <p>Admin Login</p>
+    </div> */}
 
 <div className="sm:hidden w-10 cursor-pointer ">
   <i
   onClick={()=>setVisible(true)} 
   className='bx bx-menu-alt-left text-4xl '></i>
+  
 </div>
       {/* mobile view icon */}
       {/* mobile view */}

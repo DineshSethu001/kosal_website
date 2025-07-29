@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
@@ -26,7 +27,7 @@ const About = () => {
         </p>
 
         <p className="mt-6 text-center font-semibold text-blue-600 hover:text-blue-800 cursor-pointer transition duration-300">
-          📞 Contact now for a free consultation or to schedule a service!
+          <Link to="/contact">📞 Contact now for a free consultation or to schedule a service!</Link>
         </p>
       </div>
     </section>
