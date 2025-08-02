@@ -13,6 +13,7 @@ const Home = () => {
       <div className='pt-8'>
         <Contact/>
       </div>
+      
     </div>
   )
 }
